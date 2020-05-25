@@ -13,12 +13,10 @@ class AnimatedTextChangeLabel: Any {}
 extension UILabel {
         
     func transitionToText(_ targetText: String, _ duration: Double = 1.0, _ ticksSoFar: Int = 0, _ ticksSinceLetterChange: Int = 0, _ ticksSinceDeltaChange: Int = 0, _ ticksPerDelta: Int = -1) {
-        self.isUserInteractionEnabled = false
         let tickTock = 0.01
         let fromText = self.text ?? ""
         var curr = Array(fromText)
         let targetArr = Array(targetText)
-        
         let alpha = Array("abcdefghijklmnopqrstuvwzyz")
         var ticksSoFar = ticksSoFar
         var ticksSinceLetterChange = ticksSinceLetterChange
@@ -28,11 +26,11 @@ extension UILabel {
         var totalTicks = 0
         while (tickTock * Double(totalTicks) <= duration) { totalTicks += 1 }
         var ticksPerLetter = totalTicks / targetText.count
-        if ticksPerLetter == 0 { print("totalTicks \(totalTicks)"); ticksPerLetter = 1 }
+        if ticksPerLetter == 0 { ticksPerLetter = 1 }
         
         let remDelta = abs(curr.count - targetArr.count)
         if ticksPerDelta == -1 && remDelta != 0 {
-            ticksPerDelta = totalTicks / remDelta; print("total: \(totalTicks) tpl: \(ticksPerLetter) tpd: \(ticksPerDelta)")
+            ticksPerDelta = totalTicks / remDelta
             if ticksPerDelta > 1 { ticksPerDelta /= 2 }
         }
         
@@ -77,9 +75,7 @@ extension UILabel {
             args["ticksPerDelta"]  = ticksPerDelta
             self.perform(#selector(textTickTock(_:)), with: args, afterDelay: tickTock)
         } else {
-            print("finish")
             self.text = targetText
-            self.isUserInteractionEnabled = true
         }
     }
     
