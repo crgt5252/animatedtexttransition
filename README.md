@@ -10,3 +10,5 @@ Include `AnimatedTextChangeLabel.swift` in project
 let desiredText = "Your fresh text"
 sampleLabel.transitionToText("desiredText")
 ```
+
+![animatedtexttransition](demo/att-demo.gif)
