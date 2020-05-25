@@ -14,6 +14,7 @@
 		87F56285247AEEA6007AB71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F56284247AEEA6007AB71D /* Assets.xcassets */; };
 		87F56288247AEEA6007AB71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F56286247AEEA6007AB71D /* LaunchScreen.storyboard */; };
 		87F56293247AEEA6007AB71D /* TextTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F56292247AEEA6007AB71D /* TextTransitionTests.swift */; };
+		87F5629E247B4C67007AB71D /* AnimatedTextChangeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5629D247B4C67007AB71D /* AnimatedTextChangeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		87F5628E247AEEA6007AB71D /* TextTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F56292247AEEA6007AB71D /* TextTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransitionTests.swift; sourceTree = "<group>"; };
 		87F56294247AEEA6007AB71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F5629D247B4C67007AB71D /* AnimatedTextChangeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTextChangeLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		87F5626F247AEEA3007AB71D = {
 			isa = PBXGroup;
 			children = (
+				87F5629D247B4C67007AB71D /* AnimatedTextChangeLabel.swift */,
 				87F5627A247AEEA3007AB71D /* TextTransition */,
 				87F56291247AEEA6007AB71D /* TextTransitionTests */,
 				87F56279247AEEA3007AB71D /* Products */,
@@ -202,6 +205,7 @@
 			files = (
 				87F56280247AEEA3007AB71D /* ViewController.swift in Sources */,
 				87F5627C247AEEA3007AB71D /* AppDelegate.swift in Sources */,
+				87F5629E247B4C67007AB71D /* AnimatedTextChangeLabel.swift in Sources */,
 				87F5627E247AEEA3007AB71D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
